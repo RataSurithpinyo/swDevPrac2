@@ -1,0 +1,49 @@
+body {
+    background-image: url("images/bg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:auto;
+}
+
+.alert {
+    margin-top: 30px;
+    margin-left: 80px;
+    max-width: 600px;
+    margin-bottom: 0;
+}
+
+.card {
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.card-enroll {
+    margin-left: 50px;
+}
+
+.carousel {
+    /* display: flex;
+    align-items: center;
+    align-content: center; */
+    margin-left: 80px;
+    margin-top: 30px;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+}
+
+.register-form {
+    max-width: 600px;
+    margin-top: 50px;
+    margin-left: 430px;
+}
+
+h5 {
+    margin-bottom: 10px;
+}
