@@ -10,7 +10,9 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="register.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
   </head>
   <body>
     <script
@@ -54,7 +56,9 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Thailand</a></li>
                   <li><a class="dropdown-item" href="#">Asia</a></li>
-                  <li><a class="dropdown-item" href="#">Around the world</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Around the world</a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -74,37 +78,88 @@
       </nav>
 
       <form class="register-form">
-        <div style="margin-bottom: 15px;">
+        <div style="margin-bottom: 15px">
           <h5>ชื่อบริษัท</h5>
-          <input type="text" class="form-control" id="name" placeholder="Enter company's name">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter company's name"
+          />
         </div>
-        <div style="margin-bottom: 15px;">
-          <h5>ขนาดของบูธ</h5>
-          <select class="form-control">
-            <option>10x10 ฟุต</option>
-            <option>10x15 ฟุต</option>
-          </select>
+
+        <div class="dropdown" style="margin-bottom: 15px">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            กรุณาเลือกขนาดบูธ
+          </button>
+          <div
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuButton"
+            id="dropdown"
+          >
+            <a class="dropdown-item" value="10x10" onclick="showBoothSize(this)"
+              >10x10 ฟุต</a
+            >
+            <a class="dropdown-item" value="10x15" onclick="showBoothSize(this)"
+              >10x15 ฟุต</a
+            >
+          </div>
         </div>
-        <div style="margin-bottom: 15px;">
-            <h5>ต้องการตั้งโต๊ะภายในบูธหรือไม่</h5>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-            <label class="form-check-label" for="inlineCheckbox1">ต้องการ</label>
+
+        <div style="margin-bottom: 15px">
+          <h5>ต้องการตั้งโต๊ะภายในบูธหรือไม่</h5>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineCheckbox1"
+            value="yes"
+          />
+          <label class="form-check-label" for="inlineCheckbox1">ต้องการ</label>
         </div>
-        <div style="max-width: 200px; margin-bottom: 15px;">
+        <div style="max-width: 200px; margin-bottom: 15px">
           <h5>จำนวนเก้าอี้</h5>
-          <input type="number" class="form-control" placeholder="Enter a number">
+          <input
+            type="number"
+            class="form-control"
+            id="chairs"
+            placeholder="Enter a number"
+          />
         </div>
-        <div style="margin-bottom: 15px;">
+        <div style="margin-bottom: 15px">
           <h5>ชื่อผู้ติดต่อ</h5>
-          <input type="text" class="form-control" placeholder="Enter a name">
+          <input
+            type="text"
+            class="form-control"
+            id="contactPerson"
+            placeholder="Enter a name"
+          />
         </div>
-        <div style="margin-bottom: 15px;">
+        <div style="margin-bottom: 15px">
           <h5>เบอร์ผู้ติดต่อ</h5>
-          <input type="text" class="form-control" placeholder="Enter a phone number">
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            placeholder="Enter a phone number"
+          />
         </div>
-        <div style="text-align: center;">
-          <button type="button" class="btn btn-primary">Submit</button>
+        <div style="text-align: center">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="checkValidInput();"
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>
-</body>
+  </body>
+</html>
